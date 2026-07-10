@@ -1,0 +1,12 @@
+html { font-size: 14px; }
+@media (min-width: 768px) { html { font-size: 16px; } }
+body { background: #f7f8fa; color: #252a31; min-height: 100vh; }
+main { min-height: calc(100vh - 145px); }
+.navbar-brand { letter-spacing: 0; }
+.card { border-radius: 6px; }
+.summary-card { border-left-width: 4px !important; height: 100%; }
+.summary-card .display-6 { font-weight: 600; }
+.table { background: white; }
+.table th { white-space: nowrap; }
+.form-control:focus, .form-select:focus { border-color: #4668a7; box-shadow: 0 0 0 .2rem rgba(70,104,167,.18); }
+.btn { border-radius: 5px; }

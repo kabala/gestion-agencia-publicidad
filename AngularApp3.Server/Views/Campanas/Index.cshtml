@@ -1,0 +1,57 @@
+@model IEnumerable<AngularApp3.Server.Models.Campana>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Nuevo registro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Presupuesto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Presupuesto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente!.Contacto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CampanaId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.CampanaId">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.CampanaId">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+
+

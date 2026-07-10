@@ -1,0 +1,46 @@
+@model AngularApp3.Server.Models.Entregable
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Entregable</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaEntrega)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaEntrega)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Campana)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Campana!.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Disenador)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Disenador!.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.EntregableId">Editar</a> |
+    <a asp-action="Index">Volver al listado</a>
+</div>
+
+
+
+
